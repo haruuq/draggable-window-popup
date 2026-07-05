@@ -1,0 +1,98 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    height:100vh;
+
+    overflow:hidden;
+
+    background:#101010;
+
+    font-family:Inter, Arial, sans-serif;
+}
+
+/* WINDOW */
+
+.window{
+
+    position:absolute;
+
+    top:120px;
+    left:180px;
+
+    width:520px;
+    height:350px;
+
+    background:#1b1b1b;
+    color:white;
+
+    border-radius:18px;
+    border:1px solid rgba(255,255,255,.08);
+
+    overflow:hidden;
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.45);
+
+    will-change:transform;
+    transition:
+        box-shadow .15s ease,
+        border-color .15s ease;
+}
+
+.window.active{
+
+    border-color:rgba(255,255,255,.18);
+    box-shadow:
+        0 35px 80px rgba(0,0,0,.6);
+}
+
+/* TITLE BAR */
+
+.title-bar{
+
+    position:relative;
+    height:44px;
+    display:flex;
+    justify-content:center;
+
+    align-items:center;
+    cursor:move;
+    user-select:none;
+    background:linear-gradient(#252525,#1f1f1f);
+
+    border-bottom:1px solid rgba(255,255,255,.06);
+}
+
+.title{
+
+    font-size:14px;
+    color:#d6d6d6;
+    font-weight:500;
+    letter-spacing:.3px;
+}
+
+/* CONTENT */
+
+.content{
+
+    padding:25px;
+    line-height:1.8;
+    text-align: center;
+}
+
+.content h2{
+    
+    margin-bottom:12px;
+}
+
+/* Makes resize feel nicer */
+
+.window:hover{
+
+    box-shadow:
+        0 28px 75px rgba(0,0,0,.55);
+}
